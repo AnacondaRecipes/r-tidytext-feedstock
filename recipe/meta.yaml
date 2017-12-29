@@ -1,4 +1,4 @@
-{% set version = '0.1.4' %}
+{% set version = '0.1.5' %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,7 +12,7 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/tidytext_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/tidytext/tidytext_{{ version }}.tar.gz
-  sha256: 2e952a8d64a22a054112e16f90efe6e526829949092c9eb040cfce34ff8d5354
+  sha256: 76333715f0834925ff0478e948a499ec95bb145575b80d4f0ad67eb9b96ae3a4
 
 
   # patches:
@@ -84,7 +84,7 @@ extra:
 # Package: tidytext
 # Type: Package
 # Title: Text Mining using 'dplyr', 'ggplot2', and Other Tidy Tools
-# Version: 0.1.4
+# Version: 0.1.5
 # Authors@R: c(person("Gabriela", "De Queiroz", email = "gabidequeiroz@gmail.com", role = c("ctb")), person("Oliver", "Keyes", email = "ironholds@gmail.com", role = c("ctb")), person("David", "Robinson", email = "admiral.david@gmail.com", role = c("aut")), person("Julia", "Silge", email = "julia.silge@gmail.com", role = c("aut", "cre")))
 # Description: Text mining for word processing and sentiment analysis using 'dplyr', 'ggplot2', and other tidy tools.
 # License: MIT + file LICENSE
@@ -97,11 +97,11 @@ extra:
 # Suggests: readr, tidyr, XML, tm, quanteda, wordcloud, knitr, rmarkdown, ggplot2, reshape2, topicmodels, NLP, scales, gutenbergr, testthat, mallet, stm
 # VignetteBuilder: knitr
 # NeedsCompilation: no
-# Packaged: 2017-09-29 20:56:37 UTC; juliasilge
+# Packaged: 2017-11-18 02:48:42 UTC; juliasilge
 # Author: Gabriela De Queiroz [ctb], Oliver Keyes [ctb], David Robinson [aut], Julia Silge [aut, cre]
 # Maintainer: Julia Silge <julia.silge@gmail.com>
 # Repository: CRAN
-# Date/Publication: 2017-09-29 21:57:43 UTC
+# Date/Publication: 2017-11-18 06:38:08 UTC
 
 # See
 # http://docs.continuum.io/conda/build.html for
