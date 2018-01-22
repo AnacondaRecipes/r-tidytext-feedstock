@@ -10,8 +10,8 @@ package:
 source:
   fn: tidytext_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/tidytext_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/tidytext/tidytext_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/tidytext_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/tidytext/tidytext_{{ version }}.tar.gz
   sha256: 76333715f0834925ff0478e948a499ec95bb145575b80d4f0ad67eb9b96ae3a4
 
 
