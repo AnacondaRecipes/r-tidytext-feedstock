@@ -1,4 +1,4 @@
-{% set version = '0.1.5' %}
+{% set version = '0.1.8' %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,25 +12,19 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/tidytext_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/tidytext/tidytext_{{ version }}.tar.gz
-  sha256: 76333715f0834925ff0478e948a499ec95bb145575b80d4f0ad67eb9b96ae3a4
-
-
-  # patches:
-   # List any patch files here
-   # - fix.patch
+  sha256: 743bb89d40ff032350acbc7db590977cc1c3a4dac328b08a05ca2d7cc3818383
 
 build:
   merge_build_host: True  # [win]
   # If this is a new build for the same version, increment the build number.
   number: 0
 
-
   # This is required to make R link correctly on Linux.
   rpaths:
     - lib/R/lib/
     - lib/
 
-# Suggests: readr, tidyr, XML, tm, quanteda, wordcloud, knitr, rmarkdown, ggplot2, reshape2, topicmodels, NLP, scales, gutenbergr, testthat, mallet, stm
+# Suggests: readr, tidyr, XML, tm, quanteda, knitr, rmarkdown, ggplot2, reshape2, wordcloud, topicmodels, NLP, scales, gutenbergr, testthat, mallet, stm
 requirements:
   build:
 
@@ -43,6 +37,7 @@ requirements:
     - r-janeaustenr
     - r-purrr >=0.1.1
     - r-rlang
+    - r-stopwords
     - r-stringr
     - r-tokenizers
 
@@ -55,6 +50,7 @@ requirements:
     - r-janeaustenr
     - r-purrr >=0.1.1
     - r-rlang
+    - r-stopwords
     - r-stringr
     - r-tokenizers
 
@@ -88,8 +84,8 @@ extra:
 # Package: tidytext
 # Type: Package
 # Title: Text Mining using 'dplyr', 'ggplot2', and Other Tidy Tools
-# Version: 0.1.5
-# Authors@R: c(person("Gabriela", "De Queiroz", email = "gabidequeiroz@gmail.com", role = c("ctb")), person("Oliver", "Keyes", email = "ironholds@gmail.com", role = c("ctb")), person("David", "Robinson", email = "admiral.david@gmail.com", role = c("aut")), person("Julia", "Silge", email = "julia.silge@gmail.com", role = c("aut", "cre")))
+# Version: 0.1.8
+# Authors@R: c(person("Gabriela", "De Queiroz", role = c("ctb"), email = "gabidequeiroz@gmail.com"), person("Os", "Keyes", role = c("ctb"), email = "ironholds@gmail.com", comment = c(ORCID = "0000-0001-5196-609X")), person("Kanishka", "Misra", role = c("ctb"), email = "kmisra@purdue.edu"), person("David", "Robinson", role = c("aut"), email = "admiral.david@gmail.com"), person("Julia", "Silge", role = c("aut", "cre"),  email = "julia.silge@gmail.com",  comment = c(ORCID = "0000-0002-3671-836X")))
 # Description: Text mining for word processing and sentiment analysis using 'dplyr', 'ggplot2', and other tidy tools.
 # License: MIT + file LICENSE
 # LazyData: TRUE
@@ -97,15 +93,15 @@ extra:
 # BugReports: http://github.com/juliasilge/tidytext/issues
 # RoxygenNote: 6.0.1
 # Depends: R (>= 2.10)
-# Imports: rlang, dplyr, stringr, hunspell, broom, Matrix, tokenizers, janeaustenr, purrr (>= 0.1.1), methods
-# Suggests: readr, tidyr, XML, tm, quanteda, wordcloud, knitr, rmarkdown, ggplot2, reshape2, topicmodels, NLP, scales, gutenbergr, testthat, mallet, stm
+# Imports: rlang, dplyr, stringr, hunspell, broom, Matrix, tokenizers, janeaustenr, purrr (>= 0.1.1), methods, stopwords
+# Suggests: readr, tidyr, XML, tm, quanteda, knitr, rmarkdown, ggplot2, reshape2, wordcloud, topicmodels, NLP, scales, gutenbergr, testthat, mallet, stm
 # VignetteBuilder: knitr
 # NeedsCompilation: no
-# Packaged: 2017-11-18 02:48:42 UTC; juliasilge
-# Author: Gabriela De Queiroz [ctb], Oliver Keyes [ctb], David Robinson [aut], Julia Silge [aut, cre]
+# Packaged: 2018-03-21 16:02:10 UTC; juliasilge
+# Author: Gabriela De Queiroz [ctb], Os Keyes [ctb] (<https://orcid.org/0000-0001-5196-609X>), Kanishka Misra [ctb], David Robinson [aut], Julia Silge [aut, cre] (<https://orcid.org/0000-0002-3671-836X>)
 # Maintainer: Julia Silge <julia.silge@gmail.com>
 # Repository: CRAN
-# Date/Publication: 2017-11-18 06:38:08 UTC
+# Date/Publication: 2018-03-21 22:34:59 UTC
 
 # See
 # http://docs.continuum.io/conda/build.html for
